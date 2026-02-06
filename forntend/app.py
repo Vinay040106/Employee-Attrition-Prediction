@@ -3,14 +3,13 @@ import requests
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
-# ================= PAGE CONFIG =================
 st.set_page_config(
     page_title="Employee Attrition Prediction",
     layout="wide",
     page_icon="👤"
 )
 
-# ================= CSS =================
+
 st.markdown("""
 <style>
 .block-container {
@@ -68,7 +67,7 @@ label, .stSelectbox label, .stNumberInput label {
 </style>
 """, unsafe_allow_html=True)
 
-# ================= VALUE MAPS =================
+
 edu = {"Below College":1,"College":2,"Bachelor":3,"Master":4,"Doctor":5}
 job_sat = {"Very Dissatisfied":1,"Dissatisfied":2,"Satisfied":3,"Very Satisfied":4}
 env_sat = {"Poor":1,"Average":2,"Good":3,"Excellent":4}
@@ -77,10 +76,9 @@ wlb = {"Poor":1,"Fair":2,"Good":3,"Excellent":4}
 perf = {"Low":1,"Good":2,"Excellent":3,"Outstanding":4}
 job_lvl = {"Entry Level":1,"Junior":2,"Mid Level":3,"Senior":4,"Manager":5}
 
-# ================= LAYOUT =================
 left, center, right = st.columns([1.1, 3.2, 1.5])
 
-# ================= LEFT =================
+
 with left:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.markdown("### 👤 About")
@@ -95,7 +93,7 @@ with left:
     """)
     st.markdown("</div>", unsafe_allow_html=True)
 
-# ================= CENTER =================
+
 with center:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.markdown("## Employee Attrition Prediction")
@@ -127,7 +125,7 @@ with center:
     predict = st.button("🔍 Predict Attrition")
     st.markdown("</div>", unsafe_allow_html=True)
 
-# ================= RIGHT =================
+
 with right:
     st.markdown("<div class='card'>", unsafe_allow_html=True)
     st.markdown("### 📊 Prediction Result")
@@ -175,7 +173,7 @@ with right:
 
     st.markdown("</div>", unsafe_allow_html=True)
 
-# ================= CSV UPLOAD & METRICS =================
+
 st.markdown("<div class='card'>", unsafe_allow_html=True)
 st.markdown("## 📂 Bulk Prediction & Model Evaluation")
 
@@ -213,4 +211,5 @@ if uploaded_file:
         d.metric("F1 Score", f"{f1:.2f}")
 
 st.markdown("</div>", unsafe_allow_html=True)
+
 
