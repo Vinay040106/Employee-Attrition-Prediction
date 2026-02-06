@@ -45,7 +45,7 @@ The application includes:
   
 ---
 
-## 🖥️ Tech Stack
+## Tech Stack
 
 - Python
 - Pandas, NumPy
