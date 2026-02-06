@@ -37,8 +37,19 @@ The application includes:
 - WorkLifeBalance  
 - YearsAtCompany  
 
-### 🧹 Data Preprocessing
+### Data Preprocessing
 - Missing value handling
 - Feature scaling using StandardScaler
 - Label encoding
 - Train-test split
+  
+---
+
+## 🖥️ Tech Stack
+
+- Python
+- Pandas, NumPy
+- Scikit-learn
+- FastAPI
+- Streamlit
+- Uvicorn
